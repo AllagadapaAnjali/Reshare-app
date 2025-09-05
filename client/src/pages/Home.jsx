@@ -85,7 +85,7 @@ const Home = () => {
   useEffect(() => {
     const fetchDonations = async () => {
       try {
-        const response = await axios.get('https://reshare-backend.onrender.com/api/donations');
+        const response = await axios.get('https://reshare-backend-s5na.onrender.com/api/donations');
         setDonations(response.data);
       } catch (error) {
         console.error('Error fetching donations:', error);

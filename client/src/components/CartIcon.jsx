@@ -44,7 +44,8 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaShoppingCart } from 'react-icons/fa';
+// import { FaShoppingCart } from "react-icons/fa6";
+import { FaCartPlus } from "react-icons/fa";
 import { useCart } from '../context/CartContext';
 
 const CartIcon = () => {
@@ -52,7 +53,7 @@ const CartIcon = () => {
 
   return (
     <Link to="/cart" style={{ color: '#000', textDecoration: 'none', position: 'relative' }}>
-      <FaShoppingCart size={24} />
+      <FaCartPlus size={24} />
       {cart.length > 0 && (
         <span
           style={{

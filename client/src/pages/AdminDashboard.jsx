@@ -6,7 +6,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get('https://reshare-backend.onrender.com/api/donations');
+      const res = await axios.get('https://reshare-backend-s5na.onrender.com/api/donations');
       setDonations(res.data);
     };
     fetchData();

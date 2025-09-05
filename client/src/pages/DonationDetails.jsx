@@ -10,7 +10,7 @@ const DonationDetails = () => {
   useEffect(() => {
     const fetchDonation = async () => {
       try {
-        const res = await axios.get(`https://reshare-backend.onrender.com/api/donations/${id}`);
+        const res = await axios.get(`https://reshare-backend-s5na.onrender.com/api/donations/${id}`);
         setDonation(res.data);
         setLoading(false);
       } catch (err) {
