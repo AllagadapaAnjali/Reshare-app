@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+const API = process.env.REACT_APP_API_URL;
 const AdminDashboard = () => {
   const [donations, setDonations] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get('https://reshare-backend-s5na.onrender.com/api/donations');
+      const res = await axios.get(`${API}/api/donations`);
       setDonations(res.data);
     };
     fetchData();

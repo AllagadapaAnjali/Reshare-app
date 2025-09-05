@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
+const API = process.env.REACT_APP_API_URL;
 const DonationDetails = () => {
   const { id } = useParams(); // gets the ID from URL
   const [donation, setDonation] = useState(null);
@@ -10,7 +11,7 @@ const DonationDetails = () => {
   useEffect(() => {
     const fetchDonation = async () => {
       try {
-        const res = await axios.get(`https://reshare-backend-s5na.onrender.com/api/donations/${id}`);
+        const res = await axios.get(`${API}/api/donations/${id}`);
         setDonation(res.data);
         setLoading(false);
       } catch (err) {

@@ -39,7 +39,8 @@ const donationRoutes = require("./routes/donationRoutes");
 const app = express();
 
 // Middleware
-app.use(cors({ origin: "https://reshare-app.vercel.app", methods: ["GET", "POST"] }));
+app.use(cors({ origin: "https://reshare-app.vercel.app", methods: ["GET","POST","PUT","DELETE"],
+  credentials: true }));
 app.use(express.json());
 
 // Routes

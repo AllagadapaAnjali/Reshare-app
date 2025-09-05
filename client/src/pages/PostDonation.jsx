@@ -537,6 +537,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { locationData } from "../data/locationData"; // state → city data
 
+const API = process.env.REACT_APP_API_URL;
 function PostDonation() {
   const [form, setForm] = useState({
     title: "",
@@ -574,7 +575,7 @@ function PostDonation() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://reshare-backend-s5na.onrender.com/api/donations", form);
+      await axios.post(`${API}/api/donations`, form);
       alert("Donation posted successfully!");
     } catch (error) {
       console.error("Error posting donation:", error.response?.data || error);
