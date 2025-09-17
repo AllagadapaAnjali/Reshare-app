@@ -76,7 +76,7 @@ import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext'; // ✅ To access user email
 import './Home.css';
 
-const API = process.env.REACT_APP_API_URL;
+// const API = process.env.REACT_APP_API_URL;
 const Home = () => {
   const [donations, setDonations] = useState([]);
   const navigate = useNavigate();
@@ -86,7 +86,8 @@ const Home = () => {
   useEffect(() => {
     const fetchDonations = async () => {
       try {
-        const response = await axios.get(`${API}/api/donations`);
+        // const response = await axios.get(`${API}/api/donations`);
+        const response = await axios.get('http://localhost:5000/api/donations');
         setDonations(response.data);
       } catch (error) {
         console.error('Error fetching donations:', error);
