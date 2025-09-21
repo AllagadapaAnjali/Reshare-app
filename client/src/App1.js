@@ -9,7 +9,7 @@ import {
 
 import WelcomePage from "./pages/WelcomePage";
 import Login from "./pages/Login1";
-import Signup from "./pages/Signup";
+import Signup from "./pages/Signup1";
 import Home from "./pages/Home1";
 import PostDonation from "./pages/PostDonation1";
 import DonationDetails from "./pages/DonationDetails1";
