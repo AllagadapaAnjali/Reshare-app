@@ -1,0 +1,156 @@
+/* src/pages/PostDonation.css */
+.post-donation-mobile {
+  min-height: 100vh;
+  background: #f8f9fa;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.post-header {
+  background: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #e9ecef;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #f8f9fa;
+}
+
+.post-header h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.donation-form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 16px;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: white;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4A9B8E;
+  box-shadow: 0 0 0 3px rgba(74, 155, 142, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.image-upload {
+  border: 2px dashed #e9ecef;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  background: white;
+  transition: border-color 0.3s ease;
+}
+
+.image-upload:hover {
+  border-color: #4A9B8E;
+  background: #f8f9fa;
+}
+
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.upload-icon {
+  font-size: 2rem;
+}
+
+.upload-label span {
+  font-size: 0.9rem;
+}
+
+.submit-btn {
+  background: #4A9B8E;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background: #3d8474;
+}
+
+@media (max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .donation-form {
+    padding: 0.75rem;
+  }
+  
+  .image-upload {
+    padding: 1.5rem;
+  }
+}

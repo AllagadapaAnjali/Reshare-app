@@ -1,0 +1,139 @@
+/* src/pages/WelcomePage.css */
+.welcome-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #8EA8C3 0%, #B0C8D8 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-content {
+  text-align: center;
+  z-index: 2;
+  max-width: 400px;
+  width: 100%;
+}
+
+.logo-container {
+  margin-bottom: 3rem;
+}
+
+.logo-square {
+  width: 80px;
+  height: 80px;
+  background-color: #4A9B8E;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo-text {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.welcome-description {
+  font-size: 1.1rem;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+}
+
+.get-started-btn {
+  background-color: white;
+  color: #4A9B8E;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+}
+
+.get-started-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.welcome-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  z-index: 1;
+}
+
+.food-items {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.food-item {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.food-item.bread {
+  width: 150px;
+  height: 100px;
+  background: linear-gradient(45deg, #D4A574, #E6C29A);
+  bottom: -50px;
+  left: -50px;
+  border-radius: 50px;
+}
+
+.food-item.bowl {
+  width: 120px;
+  height: 80px;
+  background: linear-gradient(45deg, #B8C5D6, #D4E1F0);
+  bottom: -40px;
+  right: -40px;
+  border-radius: 60px;
+}
+
+@media (max-width: 480px) {
+  .welcome-container {
+    padding: 1rem;
+  }
+  
+  .welcome-title {
+    font-size: 2rem;
+  }
+  
+  .welcome-description {
+    font-size: 1rem;
+  }
+  
+  .logo-square {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .logo-text {
+    font-size: 14px;
+  }
+}
