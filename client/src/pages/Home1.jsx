@@ -17,7 +17,8 @@ const Home = () => {
   useEffect(() => {
     const fetchDonations = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/donations');
+        // const response = await fetch('http://localhost:5000/api/donations');
+        const response = await fetch('https://reshare-backend-s5na.onrender.com/api/donations');
         const data = await response.json();
         setDonations(data);
       } catch (error) {
