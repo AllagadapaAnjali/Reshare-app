@@ -244,15 +244,28 @@ const router = express.Router();
 const Donation = require("../models/Donation");
 
 // Create a donation
+// router.post("/", async (req, res) => {
+//   try {
+//     const donation = new Donation(req.body);
+//     await donation.save();
+//     res.status(201).json(donation);
+//   } catch (err) {
+//     res.status(400).json({ message: "Error posting donation", error: err.message });
+//   }
+// });
+
 router.post("/", async (req, res) => {
   try {
+    console.log("Incoming donation payload:", req.body); // <-- log payload
     const donation = new Donation(req.body);
     await donation.save();
     res.status(201).json(donation);
   } catch (err) {
+    console.error("Donation POST error:", err); // <-- log full error
     res.status(400).json({ message: "Error posting donation", error: err.message });
   }
 });
+
 
 //Get all donations
 router.get("/", async (req, res) => {

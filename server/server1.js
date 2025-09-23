@@ -81,7 +81,7 @@ app.use(cors({
 //   methods: ["GET", "POST", "PUT", "DELETE"],
 //   credentials: true
 // }));
-// app.use(express.json()); // For parsing JSON requests
+app.use(express.json()); // For parsing JSON requests
 
 // Routes
 app.use("/api/donations", donationRoutes);
